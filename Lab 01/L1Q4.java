@@ -19,7 +19,7 @@ public class L1Q4 {
         int maxValue = 0, sum = 0;
 
         for (int value: data.values()) {
-            maxValue = value > maxValue ? value : maxValue;
+            maxValue = Math.max(value, maxValue);
             sum += value;
         }
 
