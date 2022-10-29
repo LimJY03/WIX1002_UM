@@ -23,8 +23,7 @@ public class L1Q4 {
             sum += value;
         }
 
-        // Determine Scale Based On Mean
-        // double mean = (sum + 0.0) / data.size();
+        // Determine Scale
         double globalScale = Math.pow(10, (int) Math.log10((sum + 0.0) / data.size()));
         int scaleBaseMax = (int) (Math.ceil(maxValue / globalScale) * globalScale);
 
