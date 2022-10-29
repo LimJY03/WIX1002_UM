@@ -42,7 +42,7 @@ The file `README.md` documents some of the key takeaways in this lab. However, i
 
 ## Contribution
 
-Should you wish to contribute to this repository, please feel free to create a pull request. To know more about pull request and how to do it, please refer to the following GitHub Documentations:
+Should you wish to contribute to this repository, feel free to create a pull request. To know more about pull request and how to do it, please refer to the following GitHub Documentations:
 
 * [About Pull Requests in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 * [Creating Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
