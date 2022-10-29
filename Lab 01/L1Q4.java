@@ -15,15 +15,18 @@ public class L1Q4 {
         data.put("May", 3200);
         data.put("Jun", 800);
 
-        // Get Maximum Value for Scaling
-        int maxValue = 0;
+        // Get Maximum Value and Average Value for Scaling
+        int maxValue = 0, sum = 0;
 
         for (int value: data.values()) {
             maxValue = value > maxValue ? value : maxValue;
+            sum += value;
         }
 
-        // Determine Scale
-        int scaleBase = (int) Math.ceil(maxValue / 1000.0) * 1000;
+        // Determine Scale Based On Mean
+        // double mean = (sum + 0.0) / data.size();
+        double globalScale = Math.pow(10, (int) Math.log10((sum + 0.0) / data.size()));
+        int scaleBaseMax = (int) (Math.ceil(maxValue / globalScale) * globalScale);
 
         // Generate Bar Chart
         System.out.println("       Month\n         │");
@@ -31,7 +34,7 @@ public class L1Q4 {
         for (String month: data.keySet()) {
 
             // Determine Bar Length
-            int len = data.get(month) * 20 / scaleBase;
+            int len = data.get(month) * 20 / scaleBaseMax;
 
             // Display Bar
             System.out.printf("%s 2016 │ %s %s\n", month, ("=").repeat(len), data.get(month));
