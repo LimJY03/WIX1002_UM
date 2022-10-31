@@ -15,5 +15,7 @@ public class L2Q4 {
         sec = rawSec % 60;
 
         System.out.printf("%d seconds is %d hours, %d minutes and %d seconds", rawSec, hrs, min, sec);
+
+        sc.close();
     }
 }

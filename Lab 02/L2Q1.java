@@ -11,5 +11,7 @@ public class L2Q1 {
         cels = (fahr - 32) / 1.8;
 
         System.out.printf("%f Fahrenheit is %.2f Celsius.\n", fahr, cels);
+
+        sc.close();
     }
 }
