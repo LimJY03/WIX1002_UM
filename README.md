@@ -28,7 +28,7 @@ Lab #
 
 The `Lab #` parent folder refers to the lab number.
 
-* `Lab 01` refers to the Lab #1 in this course.
+* `Lab 02` refers to the Lab #2 in this course.
 
 The file `L#Q#.java` refers to a solution using `Java` for one question in the lab. There will be multiple numbers of `Java` file depending on the number of questions in the lab.
 
