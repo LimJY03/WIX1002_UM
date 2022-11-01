@@ -23,6 +23,9 @@ Lab #
  └─ README.md
 ```
 
+> **Warning**
+> <br>The diagram above is not applicable for the folder `Lab 01`.
+
 The `Lab #` parent folder refers to the lab number.
 
 * `Lab 01` refers to the Lab #1 in this course.
