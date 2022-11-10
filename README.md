@@ -24,7 +24,7 @@ Lab #
 ```
 
 > **Warning**
-> <br>The diagram above is not applicable for the folder `Lab 01`.
+> <br>The diagram above is not applicable for the folder `Lab 01` and `Lab 07`.
 
 The `Lab #` parent folder refers to the lab number.
 
