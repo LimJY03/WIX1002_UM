@@ -2,7 +2,7 @@
 
 [WIX1002](https://spectrum.um.edu.my/course/info.php?id=151) is a core course introduced to Year 1 students in the [Faculty of Computer Science and Information Technology (FCSIT)](http://www.fsktm.um.edu.my/) of [Universiti Malaya (UM)](https://www.um.edu.my/), Malaysia.
 
-In this course, we will be learning the basics of programming using `Java` language. There would be 1 lab for each chapter in this course, and each lab would have some questions for students to try and solve using their coding skills.
+In this course, we will be learning the basics of programming using [`Java`](https://dev.java/learn/) language. There would be **at most 1** lab for each chapter in this course, and each lab would have some questions for students to try and solve using their coding skills.
 
 This repository stores my solutions for lab classes throughout this course.
 
