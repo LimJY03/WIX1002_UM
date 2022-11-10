@@ -7,7 +7,7 @@ public class L2Q5 {
         // Recursion
         int rec = randNum;
 
-        while (rec % 10 != 0) {
+        while (rec > 0) {
             sum += rec % 10;
             rec = rec / 10;
         }
