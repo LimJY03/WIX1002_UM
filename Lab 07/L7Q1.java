@@ -53,5 +53,7 @@ public class L7Q1 {
         catch (EOFException e) {}
         catch (FileNotFoundException e) { System.out.println("File Not Found"); }
         catch (IOException e) { System.out.printf("IO Exception: %s\n", e.getMessage()); }
+
+        sc.close();
     }
 }
