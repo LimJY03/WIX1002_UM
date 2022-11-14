@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class L4Q8 {
 
     public static void main(String[] args) {
