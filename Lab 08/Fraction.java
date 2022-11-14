@@ -10,6 +10,7 @@ public class Fraction {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the numerator (integer): "); this.numerator = sc.nextInt();
         System.out.print("Enter the denominator (integer): "); this.denominator = sc.nextInt();
+        sc.close();
     }
 
     // Methods
