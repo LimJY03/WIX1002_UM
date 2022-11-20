@@ -5,7 +5,7 @@ public class Tester {
     public static void main(String[] args) {
 
         // Test Game 1
-//        runGame1("Player 1", "Player 2");
+        runGame1("Player 1", "Player 2");
 
         // Test Game 2
         runGame2("Player 3", "Player 4");
