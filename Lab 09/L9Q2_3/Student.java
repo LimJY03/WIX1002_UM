@@ -20,18 +20,14 @@ public class Student extends PersonProfile {
     public Student(String name, char gender, String dob, String fileName) {
         
         super(name, gender, dob);
-        
         try {
             BufferedReader file = new BufferedReader(new FileReader("./L9Q2_3/src/" + fileName));
-
             while ((this.courseCode = file.readLine()) != null) {
-                
                 this.courseName.put(this.courseCode, file.readLine());
                 this.semester.put(this.courseCode, Integer.parseInt(file.readLine()));
                 this.session.put(this.courseCode, Integer.parseInt(file.readLine()));
                 this.mark.put(this.courseCode, Double.parseDouble(file.readLine()));
             }
-
             file.close();
         }
         catch (FileNotFoundException e) { System.out.println("File Not Found!"); }
@@ -59,5 +55,6 @@ public class Student extends PersonProfile {
                 code, this.courseName.get(code), this.semester.get(code), this.session.get(code), getGrade(this.mark.get(code))
             );
         }
+        System.out.println();
     }
 }
