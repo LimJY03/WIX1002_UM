@@ -1,4 +1,4 @@
-package L9Q2;
+package L9Q2_3;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -22,7 +22,7 @@ public class Student extends PersonProfile {
         super(name, gender, dob);
         
         try {
-            BufferedReader file = new BufferedReader(new FileReader("./L9Q2/src/" + fileName));
+            BufferedReader file = new BufferedReader(new FileReader("./L9Q2_3/src/" + fileName));
 
             while ((this.courseCode = file.readLine()) != null) {
                 
