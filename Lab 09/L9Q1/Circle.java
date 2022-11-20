@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Circle extends Shape {
 
-    protected final double DIAMETER;
+    protected double diameter;
 
     // Constructor
     public Circle() {
@@ -17,12 +17,12 @@ public class Circle extends Shape {
     private void inputDiameter() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the diameter of circle: ");
-        this.DIAMETER = sc.nextDouble();    
+        this.diameter = sc.nextDouble();
         sc.close();
     }
 
     private void compute() {
-        this.perimeter = Math.PI * this.DIAMETER;
-        this.area = Math.PI * this.DIAMETER * this.DIAMETER / 4.0;
+        this.perimeter = Math.PI * this.diameter;
+        this.area = Math.PI * this.diameter * this.diameter / 4.0;
     }
 }

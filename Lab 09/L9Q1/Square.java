@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Square extends Shape {
 
-    protected final double SIDE;
+    protected double side;
 
     // Constructor
     public Square() {
@@ -16,13 +16,13 @@ public class Square extends Shape {
     // Methods
     private void inputSide() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter SIDE length of square: ");
-        this.SIDE = sc.nextDouble();
+        System.out.print("Enter side length of square: ");
+        this.side = sc.nextDouble();
         sc.close();
     }
 
     private void compute() {
-        this.perimeter = this.SIDE * 4;
-        this.area = this.SIDE * this.SIDE;
+        this.perimeter = this.side * 4;
+        this.area = this.side * this.side;
     }
 }
