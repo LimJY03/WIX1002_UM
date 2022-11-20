@@ -22,17 +22,14 @@ public class Student extends PersonProfile {
         super(name, gender, dob);
         
         try {
-            BufferedReader file = new BufferedReader(new FileReader("./course.txt"));
-            this.courseCode = file.readLine();
+            BufferedReader file = new BufferedReader(new FileReader("./L9Q2/src/" + fileName));
 
-            while (this.courseCode != null) {
+            while ((this.courseCode = file.readLine()) != null) {
                 
                 this.courseName.put(this.courseCode, file.readLine());
                 this.semester.put(this.courseCode, Integer.parseInt(file.readLine()));
                 this.session.put(this.courseCode, Integer.parseInt(file.readLine()));
                 this.mark.put(this.courseCode, Double.parseDouble(file.readLine()));
-
-                this.courseCode = file.readLine();
             }
 
             file.close();
