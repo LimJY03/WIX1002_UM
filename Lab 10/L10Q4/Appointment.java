@@ -9,7 +9,7 @@ public class Appointment implements Searchable {
     public void book(String dateStartTime, String dateEndTime) {
         try {
             FileWriter file = new FileWriter("./L10Q4/io_files/appointment.txt", true);
-            String appointment = String.format("%s,%s", dateStartTime, dateEndTime);
+            String appointment = String.format("%s,%s\n", dateStartTime, dateEndTime);
             if (this.search(dateStartTime, dateEndTime)) {
                 file.write(appointment);
                 System.out.println("Appointment Booked!");
