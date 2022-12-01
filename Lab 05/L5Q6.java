@@ -34,7 +34,7 @@ public class L5Q6 {
                 }
                 System.out.printf("%s\n", ("0 ").repeat(rows - i - 1));
                 for (int k = 0; k <= i; k++) {
-                    temp.remove(2);
+                    temp.remove(1);
                 }
                 temp.add(0);
             }
