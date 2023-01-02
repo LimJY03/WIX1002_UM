@@ -31,18 +31,26 @@ public class LabTestExample {
     static void bubbleSortAsc(String[][] arr, int elemIdx) {
 
         for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
+
+            boolean noSwap = true;
+
+            // Bubble sorting
+            for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (compare(arr[j][elemIdx], arr[j + 1][elemIdx], elemIdx < 2)) {
                     String[] temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    noSwap = false;
                 }
             }
+
+            // Stop bubble sorting when array done sorting before iterations complete
+            if (noSwap) { break; }
         }
     }
 
     static boolean compare(String elem1, String elem2, boolean ascending) {
-        return ascending ? elem1.compareTo(elem2) > 0 : elem1.compareTo(elem2) < 0;
+        return ascending ? elem1.compareToIgnoreCase(elem2) > 0 : elem1.compareToIgnoreCase(elem2) < 0;
     }
 
     static void printRow(String[] arr) {
