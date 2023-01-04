@@ -17,7 +17,8 @@ public class LabTestExample2 {
                 sum += (twoDigit % 10) * 3;
                 sum += twoDigit / 10;
             }
-            System.out.printf("%s is %s\n", elem.ISBN, "valid", (sum % 10 == 0)? "valid" : "invalid");
+            sum += Integer.parseInt(String.valueOf(elem.ISBN.charAt(elem.ISBN.length() - 1)));
+            System.out.printf("%s is %s\n", elem.ISBN, (sum % 10 == 0) ? "valid" : "invalid");
         }
         System.out.println();
     }
