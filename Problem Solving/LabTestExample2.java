@@ -1,23 +1,23 @@
 public class LabTestExample2 {
     
-    private String author, title, ISBN;
+    private String author, title;
+    private long ISBN;
 
     public LabTestExample2(String author, String title, String ISBN) {
         this.author = author;
         this.title = title;
-        this.ISBN = ISBN;
+        this.ISBN = Long.parseLong(ISBN);
     }
 
     public static void checkISBN(LabTestExample2[] arr) {
         System.out.println("Checking ISBN:");
         for (LabTestExample2 elem: arr) {
             int sum = 0;
-            for (int i = 0; i < elem.ISBN.length() - 1; i += 2) {
-                int twoDigit = Integer.parseInt(elem.ISBN.substring(i, i + 2));
-                sum += (twoDigit % 10) * 3;
-                sum += twoDigit / 10;
+            long isbn = elem.ISBN;
+            while (isbn != 0) {
+                sum += isbn % 10; isbn /= 10;
+                sum += (isbn % 10) * 3; isbn /= 10;
             }
-            sum += Integer.parseInt(String.valueOf(elem.ISBN.charAt(elem.ISBN.length() - 1)));
             System.out.printf("%s is %s\n", elem.ISBN, (sum % 10 == 0) ? "valid" : "invalid");
         }
         System.out.println();
@@ -29,7 +29,8 @@ public class LabTestExample2 {
         }
         else if (by.equalsIgnoreCase("title")) {
             return elem1.title.compareToIgnoreCase(elem2.title) > 0;
-        }return false;
+        }
+        return false;
     }
 
     public static void sortArray(LabTestExample2[] arr, String by) {
@@ -37,9 +38,7 @@ public class LabTestExample2 {
             boolean noSwap = true;
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (isGreater(arr[j], arr[j + 1], by)) {
-                    LabTestExample2 temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    LabTestExample2 temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; 
                     noSwap = false;
                 }
             }
