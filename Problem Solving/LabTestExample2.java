@@ -24,12 +24,8 @@ public class LabTestExample2 {
     }
 
     private static boolean isGreater(LabTestExample2 elem1, LabTestExample2 elem2, String by) {
-        if (by.equalsIgnoreCase("author")) {
-            return elem1.author.compareToIgnoreCase(elem2.author) > 0;
-        }
-        else if (by.equalsIgnoreCase("title")) {
-            return elem1.title.compareToIgnoreCase(elem2.title) > 0;
-        }
+        if (by.equalsIgnoreCase("author")) { return elem1.author.compareToIgnoreCase(elem2.author) > 0; }
+        else if (by.equalsIgnoreCase("title")) { return elem1.title.compareToIgnoreCase(elem2.title) > 0; }
         return false;
     }
 
@@ -61,21 +57,23 @@ public class LabTestExample2 {
     }
 
     public static void main(String[] args) {
-        
-        LabTestExample2 record1 = new LabTestExample2("Daniel Liang", "Introduction to Java Programming", "9780136520238");
-        LabTestExample2 record2 = new LabTestExample2("Cay Horstmann", "Core Java: Fundamentals", "9780135166307");
-        LabTestExample2 record3 = new LabTestExample2("Joshua Block", "Effective Java", "9780134685991");
-        LabTestExample2 record4 = new LabTestExample2("Herbert Schildt", "Java: A Beginner's Guide", "9781260440218");
-        LabTestExample2 record5 = new LabTestExample2("Kathy Sierra", "Java : Head First", "9780596009206");
 
-        LabTestExample2[] arr = { record1, record2, record3, record4, record5 };
+        String author, title, ISBN;
 
-        checkISBN(arr);
+        LabTestExample2[] data = { 
+            new LabTestExample2(author="Daniel Liang", title="Introduction to Java Programming", ISBN="9780136520238"),
+            new LabTestExample2(author="Cay Horstmann", title="Core Java: Fundamentals", ISBN="9780135166307"),
+            new LabTestExample2(author="Joshua Block", title="Effective Java", ISBN="9780134685991"),
+            new LabTestExample2(author="Herbert Schildt", title="Java: A Beginner's Guide", ISBN="9781260440218"),
+            new LabTestExample2(author="Kathy Sierra", title="Java : Head First", ISBN="9780596009206")
+        };
 
-        sortArray(arr, "author");
-        displayTable(arr, "author");
+        checkISBN(data);
 
-        sortArray(arr, "title");
-        displayTable(arr, "title");
+        sortArray(data, "author");
+        displayTable(data, "author");
+
+        sortArray(data, "title");
+        displayTable(data, "title");
     }
 }
