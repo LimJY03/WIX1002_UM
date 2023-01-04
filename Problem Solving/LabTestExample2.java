@@ -1,14 +1,17 @@
 public class LabTestExample2 {
     
+    // Object fields
     private String author, title;
     private long ISBN;
 
+    // Constructor
     public LabTestExample2(String author, String title, String ISBN) {
         this.author = author;
         this.title = title;
         this.ISBN = Long.parseLong(ISBN);
     }
 
+    // Static methods
     public static void checkISBN(LabTestExample2[] arr) {
         System.out.println("Checking ISBN:");
         for (LabTestExample2 elem: arr) {
@@ -56,10 +59,13 @@ public class LabTestExample2 {
         System.out.println("+-----------------------------------------------------------------------------------------------------+\n");
     }
 
+    // Main
     public static void main(String[] args) {
 
+        // Variable declaration for argument readability
         String author, title, ISBN, by;
 
+        // Initializing data objects
         LabTestExample2[] data = { 
             new LabTestExample2(author="Daniel Liang", title="Introduction to Java Programming", ISBN="9780136520238"),
             new LabTestExample2(author="Cay Horstmann", title="Core Java: Fundamentals", ISBN="9780135166307"),
