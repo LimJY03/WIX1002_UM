@@ -23,34 +23,27 @@ public class LabTestExample2 {
         System.out.println();
     }
 
-    public static void sortArray(LabTestExample2[] arr, String by) {
+    private static boolean isGreater(LabTestExample2 elem1, LabTestExample2 elem2, String by) {
         if (by.equalsIgnoreCase("author")) {
-            for (int i = 0; i < arr.length - 1; i++) {
-                boolean noSwap = true;
-                for (int j = 0; j < arr.length - 1 - i; j++) {
-                    if (arr[j].author.compareToIgnoreCase(arr[j + 1].author) > 0) {
-                        LabTestExample2 temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                        noSwap = false;
-                    }
-                }
-                if (noSwap) { break; }
-            }
+            return elem1.author.compareToIgnoreCase(elem2.author) > 0;
         }
         else if (by.equalsIgnoreCase("title")) {
-            for (int i = 0; i < arr.length - 1; i++) {
-                boolean noSwap = true;
-                for (int j = 0; j < arr.length - 1 - i; j++) {
-                    if (arr[j].title.compareToIgnoreCase(arr[j + 1].title) > 0) {
-                        LabTestExample2 temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                        noSwap = false;
-                    }
+            return elem1.title.compareToIgnoreCase(elem2.title) > 0;
+        }return false;
+    }
+
+    public static void sortArray(LabTestExample2[] arr, String by) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            boolean noSwap = true;
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (isGreater(arr[j], arr[j + 1], by)) {
+                    LabTestExample2 temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    noSwap = false;
                 }
-                if (noSwap) { break; }
             }
+            if (noSwap) { break; }
         }
     }
 
