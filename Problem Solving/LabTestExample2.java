@@ -58,7 +58,7 @@ public class LabTestExample2 {
 
     public static void main(String[] args) {
 
-        String author, title, ISBN;
+        String author, title, ISBN, by;
 
         LabTestExample2[] data = { 
             new LabTestExample2(author="Daniel Liang", title="Introduction to Java Programming", ISBN="9780136520238"),
@@ -70,10 +70,10 @@ public class LabTestExample2 {
 
         checkISBN(data);
 
-        sortArray(data, "author");
-        displayTable(data, "author");
+        sortArray(data, by="author");
+        displayTable(data, by="author");
 
-        sortArray(data, "title");
-        displayTable(data, "title");
+        sortArray(data, by="title");
+        displayTable(data, by="title");
     }
 }
