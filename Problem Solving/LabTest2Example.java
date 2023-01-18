@@ -24,11 +24,12 @@ public class LabTest2Example {
     }
 }
 
+// Parent class
 class Delivery {
 
     // Object variables
-    protected String sender, recipient;
-    protected double weight = 0.0;
+    private String sender, recipient;
+    private double weight = 0.0;
 
     // Constructor
     public Delivery(String sender, String recipient, double weight) {
@@ -40,12 +41,15 @@ class Delivery {
         else { System.out.println("Invalid Weight"); }
     }
 
+    // Return formatted dp
+    protected double to2dp(double val) { return ((int) (val * 100)) / 100.0; }
+
     // Return total shipping cost
     public double totalCost() {
-        if (this.weight <= 5) { return (int) (this.weight * 2.8 * 100) / 100.0; }
-        else if (this.weight <= 20) { return (int) (5 * 2.8 * 100 + (this.weight - 5) * 5.2 * 100) / 100.0; }
-        else if (this.weight <= 50) { return (int) (5 * 2.8 * 100 + 15 * 5.2 * 100 + (this.weight - 20) * 7 * 100) / 100.0; }
-        else { return (int) (5 * 2.8 * 100 + 15 * 5.2 * 100 + 30 * 7 * 100 + (this.weight - 50) * 8.6 * 100) / 100.0; }
+        if (this.weight <= 5) { return this.to2dp(this.weight * 2.8); }
+        else if (this.weight <= 20) { return this.to2dp(5 * 2.8 + (this.weight - 5) * 5.2); }
+        else if (this.weight <= 50) { return this.to2dp(5 * 2.8 + 15 * 5.2 + (this.weight - 20) * 7); }
+        else { return this.to2dp(5 * 2.8 + 15 * 5.2 + 30 * 7 + (this.weight - 50) * 8.6); }
     }
 
     // Return stringified output
@@ -57,6 +61,7 @@ class Delivery {
     }
 }
 
+// Child class
 class SpecialDelivery extends Delivery {
 
     // Object variables
@@ -73,7 +78,7 @@ class SpecialDelivery extends Delivery {
     @Override
     public double totalCost() {
         double price = super.totalCost() + (this.weekendDelivery ? 50 : 0);
-        return this.nighttimeDelivery ? ((int) (price * 1.2 * 100) / 100.0) : price;
+        return this.nighttimeDelivery ? super.to2dp(price * 1.2) : price;
     }
 
     // Return stringified output
