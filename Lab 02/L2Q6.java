@@ -10,7 +10,7 @@ public class L2Q6 {
         double M = 0.0, Q = 0.0, Tf = 0.0, Ti = 0.0;
 
         System.out.print("Enter the amount of water in gram: ");
-        M = sc.nextDouble();
+        M = sc.nextDouble() / 1000.0;
 
         System.out.print("Enter the initial temperature in Fahrenheit: ");
         Ti = converter.fahrCels(sc.nextDouble());
