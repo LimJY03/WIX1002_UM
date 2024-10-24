@@ -41,6 +41,8 @@ The file `README.md` documents some of the key takeaways in this lab. However, i
 > **Note**
 > <br>The output of some files are included in the respective Lab Folder as well.
 
+[Small Info about GitHub](https://docs.google.com/presentation/d/1BNep4KhFYStu_mmwmLUrLkZewHHBQmQx_VneXjnNZwU/edit#slide=id.g2613593760c_0_14)
+
 ---
 
 ## Contribution
