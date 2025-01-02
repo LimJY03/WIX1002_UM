@@ -6,7 +6,7 @@ In this course, we will be learning the basics of programming using [**`Java`**]
 
 This repository stores my solutions for lab classes throughout this course.
 
-![last_update_shield](https://img.shields.io/badge/Last%20Update-Jan%202023-orange)
+![last_update_shield](https://img.shields.io/badge/Last%20Update-Oct%202024-orange)
 
 ---
 
