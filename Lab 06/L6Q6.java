@@ -10,14 +10,18 @@ public class L6Q6 {
 
     void displayPalindromePrime(int n) {
 
-        int i = 0, thisNumber = 2;
+        int i = 0, thisNumber = 2, numDigits = 1;
 
         System.out.println("First 20 Palindrome Primes:");
 
         while (i < n) {
 
-            if ((((int) Math.log10(thisNumber) + 1) % 2 == 0) && !(((int) Math.log10(thisNumber) + 1) == 2)) {
-                thisNumber = (int) Math.pow(10, (int) Math.log10(thisNumber) + 1);
+            numDigits = String.valueOf(thisNumber).length();;
+
+            // Skip all even 4, 6, 8, ... digits as all palindromes are non-prime (divisible by 11)
+            if ((numDigits % 2 == 0) && (numDigits != 2)) {
+                thisNumber = (int) Math.pow(10, numDigits) + 1;
+                continue;
             }
 
             if ((thisNumber == reverse(thisNumber)) && isPrime(thisNumber)) {
